@@ -1,0 +1,642 @@
+12:52:21 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Mon Aug 25 2025 12:52:21 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 18884,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 436232192,
+      "heapTotal": 387186688,
+      "heapUsed": 360733792,
+      "external": 26426935,
+      "arrayBuffers": 23168735
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11935.718
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+12:53:16 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Mon Aug 25 2025 12:53:16 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 14376,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 439148544,
+      "heapTotal": 387973120,
+      "heapUsed": 360704008,
+      "external": 26418348,
+      "arrayBuffers": 23160148
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11990.578
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+15:24:07 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Mon Aug 25 2025 15:24:07 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 24312,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 437448704,
+      "heapTotal": 387710976,
+      "heapUsed": 360457392,
+      "external": 26418356,
+      "arrayBuffers": 23160156
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 21041.734
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+10:36:47 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Tue Aug 26 2025 10:36:47 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 18628,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 428404736,
+      "heapTotal": 374607872,
+      "heapUsed": 337852096,
+      "external": 26292601,
+      "arrayBuffers": 23034564
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 4355.906
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+19:28:31 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Thu Aug 28 2025 19:28:31 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 13692,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 444276736,
+      "heapTotal": 389283840,
+      "heapUsed": 352538256,
+      "external": 26352000,
+      "arrayBuffers": 23093800
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 25292.109
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+05:04:50 [[31merror[39m]: [31munhandledRejection: Redis is already connecting/connected[39m
+[31mError: Redis is already connecting/connected[39m
+[31m    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)[39m
+[31m    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)[39m
+[31m    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)[39m
+[31m    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+{
+  "error": {},
+  "rejection": true,
+  "date": "Fri Aug 29 2025 05:04:50 GMT+0530 (India Standard Time)",
+  "process": {
+    "pid": 14544,
+    "uid": null,
+    "gid": null,
+    "cwd": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend",
+    "execPath": "C:\\nvm4w\\nodejs\\node.exe",
+    "version": "v20.18.1",
+    "argv": [
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ts-node\\dist\\bin.js",
+      "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts"
+    ],
+    "memoryUsage": {
+      "rss": 438525952,
+      "heapTotal": 389808128,
+      "heapUsed": 353142296,
+      "external": 26360156,
+      "arrayBuffers": 23101956
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 617.718
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": null,
+      "line": 108,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": null,
+      "file": null,
+      "function": "new Promise",
+      "line": null,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\node_modules\\ioredis\\built\\Redis.js",
+      "function": "EventEmitter.connect",
+      "line": 104,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 17,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "RedisConnection.connect",
+      "line": 84,
+      "method": "connect",
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\cache\\redis.ts",
+      "function": "connectRedis",
+      "line": 486,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "E:\\securesync-pro-20250823T130946Z-1-001\\securesync-pro\\packages\\backend\\src\\index.ts",
+      "function": "SecureSyncProServer.start",
+      "line": 212,
+      "method": "start",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 95,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+Error: Redis is already connecting/connected
+    at E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:108:24
+    at new Promise (<anonymous>)
+    at EventEmitter.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\node_modules\ioredis\built\Redis.js:104:25)
+    at RedisConnection.connect (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:84:17)
+    at connectRedis (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\cache\redis.ts:486:25)
+    at SecureSyncProServer.start (E:\securesync-pro-20250823T130946Z-1-001\securesync-pro\packages\backend\src\index.ts:212:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

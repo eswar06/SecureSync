@@ -1,0 +1,114 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: securesync-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: securesync2024
+      MONGO_INITDB_DATABASE: securesync-pro
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./infrastructure/docker/mongodb/init:/docker-entrypoint-initdb.d
+    networks:
+      - securesync-network
+
+  # Redis Cache
+  redis:
+    image: redis:7.2-alpine
+    container_name: securesync-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass securesync2024
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - securesync-network
+
+  # Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: packages/backend/Dockerfile
+    container_name: securesync-backend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      MONGODB_URI: mongodb://admin:securesync2024@mongodb:27017/securesync-pro?authSource=admin
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: securesync2024
+      JWT_SECRET: your-super-secure-jwt-secret-key-change-in-production
+      JWT_REFRESH_SECRET: your-super-secure-refresh-secret-change-in-production
+      FRONTEND_URL: http://localhost:3000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+      - redis
+    volumes:
+      - ./logs:/app/logs
+      - ./uploads:/app/uploads
+    networks:
+      - securesync-network
+
+  # Frontend Application
+  frontend:
+    build:
+      context: .
+      dockerfile: packages/frontend/Dockerfile
+    container_name: securesync-frontend
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: http://localhost:5000/api
+      VITE_SOCKET_URL: http://localhost:5000
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - securesync-network
+
+  # NGINX Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: securesync-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infrastructure/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./infrastructure/docker/nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - securesync-network
+
+  # WebRTC TURN Server (Coturn)
+  coturn:
+    image: coturn/coturn:latest
+    container_name: securesync-coturn
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./infrastructure/docker/coturn/turnserver.conf:/etc/turnserver.conf
+    command: ["-c", "/etc/turnserver.conf"]
+
+volumes:
+  mongodb_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  securesync-network:
+    driver: bridge

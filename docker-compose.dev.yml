@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: securesync-mongodb-dev
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: securesync2024
+      MONGO_INITDB_DATABASE: securesync-pro
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data_dev:/data/db
+      - ./infrastructure/docker/mongodb/init:/docker-entrypoint-initdb.d
+    networks:
+      - securesync-network-dev
+
+  # Redis Cache
+  redis:
+    image: redis:7.2-alpine
+    container_name: securesync-redis-dev
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass securesync2024
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data_dev:/data
+    networks:
+      - securesync-network-dev
+
+  # WebRTC TURN Server (Coturn)
+  coturn:
+    image: coturn/coturn:latest
+    container_name: securesync-coturn-dev
+    restart: unless-stopped
+    ports:
+      - "3478:3478"
+      - "3478:3478/udp"
+      - "5349:5349"
+      - "5349:5349/udp"
+    volumes:
+      - ./infrastructure/docker/coturn/turnserver.conf:/etc/turnserver.conf
+    command: ["-c", "/etc/turnserver.conf"]
+    networks:
+      - securesync-network-dev
+
+volumes:
+  mongodb_data_dev:
+    driver: local
+  redis_data_dev:
+    driver: local
+
+networks:
+  securesync-network-dev:
+    driver: bridge
